@@ -1,0 +1,13 @@
+language: java
+
+build_script:
+- mvn install
+
+deploy:
+  provider: azure_web_apps
+  verbose: true
+  skip_cleanup: true
+  username: xxxxxxxx       # If AZURE_WA_USERNAME isn't set
+  password: xxxxxxxx   # If AZURE_WA_PASSWORD isn't set
+  site: azure-travis-git       # If AZURE_WA_SITE isn't set
+  skip_cleanup: true
